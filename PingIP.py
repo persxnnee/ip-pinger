@@ -1,17 +1,37 @@
 import os
 import time
-import sys
+
+os.system('Mode Con Cols=35 Lines=30')
+
+#main pannel
+while(True):
+    os.system('cls')
+    os.system('color A')
+
+    print("---------------------------------")
+    print("-         CMSS IP PINGER        -")
+    print("---------------------------------")
+    print("\n")
+
+    try:
+    print("a/ CMSS info")
+    print("b/ ip pinger")
+    print("\n")
+    x=input("Enter : ")
+    break
 
 
 def info():
     os.system('cls')
-    print("Coded by CMSS_\n")
-    print("Github: github.com/CMSS666")
+    print("----------------------------")
+    print("-Discord : CMSS666#0001")
+    print("-GitHub : github.com/CMSS666")
+    print("-Youtube : INVISIBLE")
+    print("----------------------------")
     time.sleep(5)
 
 
-
-def customIP():
+def ip_ping():
     os.system('cls')
     print("Enter IP Address: ", end='')
 
@@ -19,29 +39,22 @@ def customIP():
 
     os.system('cls')
     print('Pinging:', ip)
-    os.system('ping -n 2 {}'.format(ip))     
+    os.system('ping -n 2 {}'.format(ip))
 
-    print('-'*60)
+    print('-' * 60)
     time.sleep(5)
 
-while(True):
-    os.system('cls')   
 
-    print("Ping Menu:\n")
-    print("1) for more info")
-    print("2) Input custom IP to ping.")
-    print("3) Exit.")
-    print("\n\nEnter : ", end='')
 
-    try:
-        i = int(input())
 
-        if(i==1):
-            info()
-        elif(i==2):
-            customIP()
-        elif(i==3):
-            break
-    except:
-        #loop restarts
-        print("Error!")
+if x == "a":
+    info()
+elif x == "b":
+    ip_ping()
+else:
+    os.system('cls')
+    print("-------------------")
+    print("-No assigned key !-")
+    print("-------------------")
+    time.sleep(5)
+
